@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import ReactNativeViewAttributes from 'react-native/Libraries/Components/View/ReactNativeViewAttributes';
-import TextAncestor from 'react-native/Libraries/Text/TextAncestor';
+
 
 import createReactNativeComponentClass from 'react-native/Libraries/Renderer/shims/createReactNativeComponentClass';
 import nullthrows from 'fbjs/lib/nullthrows';
@@ -130,18 +130,8 @@ const createTextGradientClass = (
         }
       }
 
-      return (
-        <TextAncestor.Consumer>
-          {hasTextAncestor =>
-            hasTextAncestor ? (
-              <RNVirtualTextGradient {...props} ref={props.forwardedRef} />
-            ) : (
-              <TextAncestor.Provider value={true}>
+       return (
                 <RNTextGradient {...props} ref={props.forwardedRef} />
-              </TextAncestor.Provider>
-            )
-          }
-        </TextAncestor.Consumer>
       );
     }
 
