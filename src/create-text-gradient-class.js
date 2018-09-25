@@ -30,7 +30,7 @@ const createTextGradientClass = (
       isHighlighted: true,
       numberOfLines: true,
       ellipsizeMode: true,
-      allowFontScaling: true,
+      allowFontScaling: false,
       disabled: true,
       selectable: true,
       selectionColor: true,
@@ -48,7 +48,7 @@ const createTextGradientClass = (
 
   class TouchableTextGradient extends React.Component {
     static defaultProps = {
-      accessible: true,
+      accessible: false,
       allowFontScaling: true,
       ellipsizeMode: 'tail',
     };
